@@ -85,6 +85,17 @@
 //     console.log("Escolha outro filme :(")
 // } 
 
+const generoFilme = prompt("Digite o gênero do filme que você irá assistir")
+const precoIngresso = Number(prompt("Digite o preço do ingresso desse filme"))
+
+if (generoFilme === "fantasia") {
+    if (precoIngresso < 15) {
+        console.log("Bom filme!")
+    }
+} else {
+    console.log("Escolha outro filme :(")
+} 
+
 
 // DESAFIOS:
 
