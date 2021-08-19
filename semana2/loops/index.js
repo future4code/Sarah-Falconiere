@@ -130,12 +130,17 @@ const arrayOriginal = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 
 // NÚMERO 2:
 
-// function getRandom(max) {
-//     return Math.floor((Math.random() * max) + 1)
+// function getRandom(min,max) {
+//     min = Math.ceil(min)
+//     max = Math.floor(max)
+//     return Math.floor(Math.random() * (max - min)) + min
 // }
 
-// const numeroEscolhido = getRandom(100)
-// // console.log(numeroEscolhido)
+// const numeroEscolhido = getRandom(1,100)
+// //console.log(numeroEscolhido)
+// console.log("Vamos jogar")
+
+
 // let numeroChutado = Number(prompt("Chute um número"))
 // let i = 0
 
