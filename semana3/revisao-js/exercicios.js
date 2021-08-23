@@ -139,7 +139,13 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
+    for(let obj of contas) {
+        for(let compra of obj.compras) {
+           obj.saldoTotal = obj.saldoTotal - compra
+        }
+        obj.compras = []
+    }
+    return contas
 }
 
 // EXERCÍCIO 15A
