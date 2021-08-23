@@ -10,27 +10,52 @@ function retornaTamanhoArray(array) {
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-
+    //return array.reverse()
+    let novaArray = []
+    for(let i = array.length - 1; i >= 0; i--) {
+        novaArray.push(array[i])
+    }
+    return novaArray
 }
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-
+    array.sort(function(a, b) {
+        return a - b;
+      });
+    return array
+    // let novaArray = []
+    // for(let i = 0; i < array.length; i++) {
+    //     for(let j = 0; j < array.length; j++) {
+    //         if(array[i]  array[j]) {
+    //             novaArray.push(array[i])
+    //         }
+    //     }
+    // }
+    // return novaArray
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+    const novaArray = array.filter(array => array % 2 === 0)
+    return novaArray
 }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    const novaArray = array.filter(array => array % 2 === 0).map(array => array * array)
+    return novaArray
 }
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+    let maiorNumero = -Infinity
+    for(let numero of array) {
+        if (numero > maiorNumero) {
+            maiorNumero = numero
+        }
+    } 
+    return maiorNumero
 }
 
 // EXERCÍCIO 07
