@@ -5,40 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adicionar Produto</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div>
-        <p>Nome da lojinha</p>
+        <p style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" class="contato-loja-verde">&#128222;Fale conosco: (31) 99999-9999 / /  Whatsapp: (31) 88888-8888 / /  ou nos envie um email: plantinhasdeapto@gmail.com</p>
+        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"  class="cabecalho"> &#127797;<em>Plantinhas de apartamento </em> &#127797;</h1>
     </div>
     
-    <div>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
+    <div class="botoes-centraliza">
+        <button>
+            <a class="botoes" href="index.html">Página Inicial</a>
+        </button>
+        <button>
+            <a class="botoes" href="ctrl-estoque.html">Controle de Estoque</a>
+        </button>
+        <button>
+            <a class="botoes" href="add-produto.html">Adicionar Produto</a>
+        </button>
+        <button>
+            <a class="botoes" href="funcionarios.html">Funcionários</a>
+        </button>
     </div>
 
     
-    <h2>Adicionar Produto</h2>
-    <form action="">
-        <div>
+    <h2 class="frase-efeito" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Adicionar Produto</h2>
+    <form class="centraliza-tabela" action="">
+        <div class="texto">
             <label for="link-foto">Link para foto: </label>
             <input type="url" id="link-foto" name="link-foto">
         </div>
         
-        <div>
+        <div class="texto">
             <label for="descricao">Descrição do produto: </label>
             <!-- Adicione o id apropriado para o input abaixo -->
             <input type="text" id="descricao" name="descrição">
         </div>
         
-        <div>
+        <div class="texto">
             <label for="preco">Preço (em R$): </label>
             <!-- Adicione o id apropriado e o type para receber números abaixo -->
             <input type="number" id="preco" name="preço">
         </div>
         
-        <div>
+        <div class="texto">
             <!-- Preencha as propriedades necessárias para os elementos abaixo -->
             <label for="quantidade">Quantidade disponível: </label>
             <input type="number" id="quantidade" name="quantidade">
@@ -46,10 +56,14 @@
 
         <div class="form-add">
             <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
-            <button type="submit">Adicionar</button>
+            <button class="botoes" type="submit">Adicionar</button>
         </div>
 
     </form>
+
+    <div>
+        <p style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" class="contato-loja-verde">&#128222;Fale conosco: (31) 99999-9999 / /  Whatsapp: (31) 88888-8888 / /  ou nos envie um email: plantinhasdeapto@gmail.com</p>
+    </div>
 
 </body>
 </html>
