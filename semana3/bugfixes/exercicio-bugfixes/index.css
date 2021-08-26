@@ -74,7 +74,11 @@ div img {
 }
 
 #container-de-descricao>ol {
-    padding: 15px 0px;
+    padding: 15x 0px;
+}
+
+#texto-container {
+    padding-top: 100px;
 }
 
 #container-para-comprar {
