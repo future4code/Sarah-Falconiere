@@ -1,0 +1,86 @@
+.contato-loja-verde{
+    background-color: rgb(76, 168, 76);
+    text-align: center;
+    margin: 0
+}
+
+.cabecalho{
+    background-color: pink;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0
+}
+
+.frase-efeito{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    margin: 0
+}
+
+.botoes{
+    font: bold 12px/24px arial, helvetica, sans-aerif;
+    text-decoration: royalblue;
+    text-align:center;
+    top:20px;
+    left:50px;
+    margin:10px;
+    padding:0px;
+    text-align: center;
+    color: black;
+    width:120px;  
+    height:24px;
+}
+
+.botoes-centraliza {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#imagem1 {
+    max-width:430px;
+    max-height:430px;
+}
+
+#imagem2 {
+    max-width:500px;
+    max-height:500px;
+}
+
+#imagem3 {
+    max-width:455px;
+    max-height:455px;
+}
+
+.imagens-controle-estoque {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+}
+
+.centraliza-imagens {
+    text-align: center;
+}
+
+.centraliza-tabela {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.icones {
+    max-width:30px;
+    max-height:30px;
+    width: auto;
+    height: auto;
+}
+
+.texto{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+    text-align: center;
+    margin: 10px;
+}
