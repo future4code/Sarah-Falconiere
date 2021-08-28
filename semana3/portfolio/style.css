@@ -1,0 +1,124 @@
+/* ESTILOS GERAIS*/
+
+header{
+    height: 60px;
+    display: block;
+    margin: auto auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ .header-nav-buttons{ /*botoes de navegação da header */
+    position: relative;
+    left: 80%;
+    top: 10%;
+    margin: 15px 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: brown;
+    font-size: large;
+}
+
+.header-nav-buttons:hover{
+    background-color: rgb(250, 222, 185);
+    border-radius: 5px;
+}
+
+header>a{
+    text-decoration: none;
+    font-size: x-large;
+    color: firebrick;
+}
+
+
+/* ESTILOS HOME */
+
+
+#container-home-1 {
+    height: 100px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.title-home{
+    text-align: center;
+    color: firebrick;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container-home-2{
+    background-color: rgb(155, 41, 79);
+    color: white;
+    height: 300px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 50px;
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+#container-home-3{
+    color: firebrick;
+    height: 400px;
+    /* padding: 100px 100px; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container-hab-tecnicas{
+    float: left;
+    margin-left: 200px;
+    vertical-align: top;
+}
+
+#container-hab-emocionais{
+    float: right;
+    margin-left: 150px;
+    vertical-align: top;
+}
+
+.icones-habilidades{
+    height: 250px;
+    width: 250px;
+    object-fit: fill;
+}
+
+#container-home-4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: rgb(155, 41, 79);
+    height: 500px;
+    text-align: center;
+}
+
+#container-ufv{
+    float: left;
+    /* margin-left: 200px; */
+    padding: 50px 50px;
+    vertical-align: top;
+}
+
+#container-labenu{
+    float: right;
+    /* margin-left: 150px; */
+    padding: 50px 50px;
+    vertical-align: top;
+}
+
+.icones-facul{
+    height: 100px;
+    width: 100px;
+    object-fit: fill;
+}
+
+
+
+
+/* ESTILOS PROJETOS */
+
+
+
+/* ESTILOS CONTATO */
+
+
+
+/* ESTILOS PROJETOS 1, 2 */
+
