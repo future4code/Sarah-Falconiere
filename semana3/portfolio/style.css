@@ -1,0 +1,229 @@
+/* ESTILOS GERAIS*/
+
+header{
+    height: 60px;
+    display: block;
+    margin: auto auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ .header-nav-buttons{ /*botoes de navegação da header */
+    position: relative;
+    left: 80%;
+    top: 10%;
+    margin: 15px 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: brown;
+    font-size: large;
+}
+
+.header-nav-buttons:hover{
+    background-color: rgb(250, 222, 185);
+    border-radius: 5px;
+}
+
+header>a{
+    text-decoration: none;
+    font-size: x-large;
+    color: firebrick;
+}
+
+footer{
+    background-color: rgb(155, 41, 79);
+    color: white;
+    text-align: center;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 35px;
+    padding-top: 10px;
+}
+
+
+/* ESTILOS HOME */
+
+
+#container-home-1 {
+    height: 100px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.title-home{
+    text-align: center;
+    color: firebrick;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container-home-2{
+    background-color: rgb(155, 41, 79);
+    color: white;
+    height: 400px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+#container-home-3{
+    color: firebrick;
+    height: 700px;
+    /* padding: 100px 100px; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+span{
+    display: inline-block;
+    height: 300px;
+    width: 350px;
+}
+
+#container-hab-tecnicas{
+    float: left;
+    margin-left: 300px;
+    margin-right: 200px;
+    vertical-align: top;
+}
+
+span>img{
+    padding-left: 70px;
+}
+
+.icones-habilidades{
+    height: 200px;
+    width: 200px;
+    object-fit: fill;
+}
+
+#container-home-4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: firebrick;
+    height: 500px;
+    text-align: center;
+    padding-top: 100px;
+    position: static;
+}
+
+#container-ufv{
+    margin-left: 60px;
+    position: relative;
+    right: 10%;
+}
+
+#container-labenu{
+    margin-left: 60px;
+    position: relative;
+    left: 10%;
+}
+
+.icones-facul{
+    height: 150px;
+    width: 150px;
+    object-fit: fill;
+    padding: 40px;
+}
+
+
+
+/* ESTILOS PROJETOS */
+
+
+.titulo-inicial{
+    color: firebrick;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 100px;
+}
+
+.icones-projetos{
+    height: 250px;
+    width: 250px;
+    object-fit: fill;
+}
+
+.container-projetos{
+    color: firebrick;
+    text-align: center;
+    padding: 100px 100px;
+    position: static;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.projetos-lado-direito{
+    margin-left: 60px;
+    position: relative;
+    left: -1%;
+    height: 350px;
+}
+
+
+.projetos-lado-esquerdo{
+    margin-left: 60px;
+    position: relative;
+    right: 10%;
+    height: 350px;
+}
+
+
+span>p>a{
+    font-size: medium;
+    text-decoration: none;
+    color: firebrick;
+    line-height: 2;
+}
+
+span>p>a:hover{
+    background-color: rgb(250, 222, 185);
+    border-radius: 5px;
+    padding: 10px 10px;
+}    
+
+
+/* ESTILOS CONTATO */
+
+form{
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: firebrick;
+    padding: 20px 50px;
+    margin: 50px 50px;
+    text-align: center;
+}
+
+.text-input{
+    width: 300px;
+    height: 30px;
+}
+
+div>textarea{
+    height: 70px;
+    width: 300px;
+}
+
+.icones-contato{
+    height: 60px;
+    width: 60px;
+    object-fit: fill;
+    position: relative;
+    left: 45%;
+    padding-bottom: 60px;
+
+}
+
+
+
+
+/* ESTILOS PROJETOS 1, 2, 3, 4 */
+
+.descricao-projeto{
+    text-align: center;
+    padding: 20px 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: firebrick;
+}
+
+.imagens-projeto{
+    text-align: center;
+}
+
