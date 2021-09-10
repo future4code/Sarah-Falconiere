@@ -14,18 +14,25 @@ const InputComentario = styled.input`
 
 export class SecaoComentario extends Component {
 	state = {
-
+		texto: ""
 	}
 
-	onChangeComentario() {
-
+	onChangeComentario = (event) => {
+		
+		this.setState({
+			texto: event.target.value
+		})
+		
+		console.log(this.state.texto)
 	}
 
+	
 	render() {
+		
 		return <CommentContainer>
 			<InputComentario
 				placeholder={'Comentário'}
-				value={''}
+				value={this.state.texto}
 				onChange={this.onChangeComentario}
 			/>
 			<button onClick={this.props.aoEnviar}>Enviar</button>
