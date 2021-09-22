@@ -9,7 +9,8 @@ import UserDetails from "./components/UserDetails";
 
 class App extends React.Component {
   state = {
-    currentScreen: "signUp"
+    currentScreen: "signUp",
+    user: []
   };
 
   pickScreen = () => {
@@ -19,7 +20,7 @@ class App extends React.Component {
       case "users":
         return <UsersScreen goToSignUp={this.goToSignUp} goToUserDetails={this.goToUserDetails}/>
       case "userDetails":
-        return <UserDetails goToUsers={this.goToUsers}/>
+        return <UserDetails goToUsers={this.goToUsers} userId={this.state.user.id} userName={this.state.user.name} userEmail={this.state.user.email}/>
       default:
         return <h1>Erro! Página não encontrada!</h1>
     }
@@ -33,14 +34,27 @@ class App extends React.Component {
     this.setState({ currentScreen: "users"})
   }
 
-  goToUserDetails = () => {
+  goToUserDetails = (id) => {
+      const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`;
+      const headers = {
+          headers: {
+              Authorization: "sarah-romanhol-maryam"
+          }
+      }
+
+      axios.get(url, headers)
+          .then((response) => {
+              this.setState({ user: response.data })
+              console.log("Cliquei")
+          }).catch((error) => {
+              alert(error.response.data.message)
+          })
     this.setState({ currentScreen: "userDetails"})
   }
 
 
 
   render() {
-
 
     return (
       <div>

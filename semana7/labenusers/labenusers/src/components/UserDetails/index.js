@@ -14,48 +14,12 @@ const ContainerListUsers = styled.div`
 
 export default class UserDetails extends React.Component {
     state = {
-        users: [],
-        currentUser: []
+        userName: this.props.userName,
+        userEmail: this.props.userEmail,
+        userId: this.props.userId
     }
 
-
-    componentDidMount = () => {
-        const userID = 
-        this.getUserById()
-    };
-
-    getUserById = (id) => {
-        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`;
-        const headers = {
-            headers: {
-                Authorization: "sarah-romanhol-maryam"
-            }
-        }
-
-        axios.get(url, headers)
-            .then((response) => {
-                this.setState({ currentUser: response.data })
-            }).catch((error) => {
-                alert(error.response.data.message)
-            })
-    };
-
-    getAllUsers = () => {
-        const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
-        const headers = {
-            headers: {
-                Authorization: "sarah-romanhol-maryam"
-            }
-        }
-
-        axios.get(url, headers)
-            .then((response) => {
-                this.setState({ users: response.data })
-            }).catch((error) => {
-                alert(error.response.data.message)
-            })
-    };
-
+    
     deleteUser = async (id) => {
         const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`;
         const headers = {
@@ -64,35 +28,32 @@ export default class UserDetails extends React.Component {
             }
         };
 
+
         if (window.confirm("tem certeza disso?")) {
             try {
+                console.log(id)
                 const res = await axios.delete(url, headers)
-                this.getAllUsers()
+                console.log("Passou aq")
                 alert("Usuário deletado com sucesso!")
             }
             catch (err) {
-                alert(err.responde.data)
+                alert(err.response.data)
             }
         } else {
-            this.getAllUsers()
+            return (<p>{this.state.userName} - {this.state.userEmail}</p>)
         }
     };
 
     render() {
-        const renderedUsers = this.state.currentUser.filter((user) => {
-            return (
-                <ContainerListUsers key={user.id}>
-                    <li> {user.name} - {user.email}</li>
+        const teste = <div>
+            <p>{this.state.userName} - {this.state.userEmail}</p>
+            <button onClick={() => this.deleteUser(this.props.userId)}>X</button>
 
-                    <button onClick={() => this.deleteUser(user.id)}>X</button>
-                </ContainerListUsers>
-            )
-        });
-
+        </div>
         return (
             <div>
                 <button onClick={this.props.goToUsers}>Voltar</button>
-                {renderedUsers}
+                {teste}
             </div>
         )
     }

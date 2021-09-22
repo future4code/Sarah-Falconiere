@@ -77,7 +77,7 @@ export default class UsersScreen extends React.Component {
         const renderedUsers = this.state.users.map((user) => {
             return (
                 <ContainerListUsers key={user.id}>
-                    <li onClick={this.props.goToUserDetails}> {user.name}</li>
+                    <li onClick={() => this.props.goToUserDetails(user.id)}> {user.name}</li>
                     <button onClick={() => this.deleteUser(user.id)}>X</button>
                 </ContainerListUsers>
             )
