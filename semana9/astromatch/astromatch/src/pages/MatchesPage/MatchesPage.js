@@ -1,42 +1,46 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import {MatchedPersonContainer, LittlePhotoProfile} from './styled';
+import {NoMatchesContainer, NoMatchesImg, NoMatchesText, MatchedPersonContainer, LittlePhotoProfile, NameProfile} from './styled';
+import heart from '../../assets/broken-heart.png'
 
-function MatchesPage () {
+function MatchesPage(props) {
 
     const [matchesList, setMatchesList] = useState([]);
+    const clear = props.clearButton
 
-
-    useEffect(()=> {
+    useEffect(() => {
         getMatches()
-    }, [])
+    }, [clear])
 
     const getMatches = () => {
         axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/sarah-romanhol-maryam/matches')
-        .then((res) => {
-            console.log(res.data.matches)
-            setMatchesList(res.data.matches)
-        })
-        .catch((err) => {
-            console.log(err.response)
-        })
+            .then((res) => {
+                setMatchesList(res.data.matches)
+            })
     }
 
     const matches = matchesList.map((person) => {
-        return(
-            <MatchedPersonContainer>
+        return (
+            <MatchedPersonContainer key={person.id}>
                 <LittlePhotoProfile src={person.photo} />
-                <p>{person.name}</p>
+                <NameProfile>{person.name}</NameProfile>
             </MatchedPersonContainer>
         )
     })
 
 
-    return(
+    return (
         <div>
-            {matches}
+            {
+            matchesList.length
+            ?
+            matches
+            :
+            <NoMatchesContainer>
+            <NoMatchesImg src={heart} />
+            <NoMatchesText>Você ainda não tem matches</NoMatchesText>
+            </NoMatchesContainer>}
         </div>
     )
 }
-
 export default MatchesPage;

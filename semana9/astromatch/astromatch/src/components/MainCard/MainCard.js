@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from "react";
-import { CardContainer, HeaderContainer, ButtonsHeaderContainer, ButtonHeader } from "./styled";
+import React, { useState } from "react";
+import { Logo, SwipeImgButton, MatchesImgButton, CardContainer, HeaderContainer, ButtonHeaderSwipe, ButtonHeaderMatches } from "./styled";
 import SwipePage from "../../pages/SwipePage/SwipePage";
-import MatchesPage from '../../pages/MatchesPage/MatchesPage'
-import logo from '../../assets/logo.png';
+import MatchesPage from '../../pages/MatchesPage/MatchesPage';
+import logo from '../../assets/astromatch-s-fundo-2.png';
+import matches from '../../assets/lovers-chatting-branco.png';
+import swipe from '../../assets/fas-branco.png'
 
 const MainCard = (props) => {
     const [currentPage, setCurrentPage] = useState('swipePage')
 
-    const changePage = (event) => {
-        setCurrentPage(event.target.value)
+    const changePage = (page) => {
+        setCurrentPage(page)
     }
 
     const renderCurrentPage = () => {
         switch (currentPage) {
             case 'matchesPage':
-                return <MatchesPage />
+                return <MatchesPage clearButton={props.clearButton} />
             case 'swipePage':
-                return <SwipePage />        
+                return <SwipePage clearButton={props.clearButton}/>
             default:
-                return <SwipePage />
+                return <SwipePage clearButton={props.clearButton}/>
         }
     }
 
@@ -26,17 +28,11 @@ const MainCard = (props) => {
         <CardContainer>
             <div>
                 <HeaderContainer>
-                    <img src={logo} alt='logo astromatch' />
-                    <ButtonsHeaderContainer>
-                        <ButtonHeader value='swipePage' onClick={changePage}>⁉</ButtonHeader>
-                        <button value='matchesPage' onClick={changePage}>👁‍🗨</button>
-                    </ButtonsHeaderContainer>
+                    <ButtonHeaderSwipe onClick={() => changePage('swipePage')}><SwipeImgButton src={swipe} /></ButtonHeaderSwipe>
+                    <Logo src={logo} alt='logo astromatch' />
+                    <ButtonHeaderMatches onClick={() => changePage('matchesPage')}><MatchesImgButton src={matches} /></ButtonHeaderMatches>
                 </HeaderContainer>
-                <hr />
                 {renderCurrentPage()}
-                {/*criar ternário que, ora renderiza swipes, ora a lista de matches*/}
-                {/* <SwipePage /> */}
-                {/* <MatchesPage /> */}
             </div>
         </CardContainer>
     )
