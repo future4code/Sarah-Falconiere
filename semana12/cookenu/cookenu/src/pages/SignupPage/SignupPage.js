@@ -7,7 +7,7 @@ import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 import { signup } from "../../services/access";
 import { useHistory } from "react-router";
 
-export const SignupPage = () => {
+export const SignupPage = ({setRightButtonText}) => {
     useUnprotectedPage()
     const history = useHistory()
 
@@ -15,7 +15,7 @@ export const SignupPage = () => {
 
     const onSubmitForm = (event) => {
         event.preventDefault()
-        signup(form, clear, history)
+        signup(form, clear, history, setRightButtonText)
     }
 
 
