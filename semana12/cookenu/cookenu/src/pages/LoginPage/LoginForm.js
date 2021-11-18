@@ -6,14 +6,14 @@ import { login } from "../../services/access";
 import { useHistory } from "react-router";
 
 
-export const LoginForm = () => {
+export const LoginForm = ({setRightButtonText}) => {
     const history = useHistory()
     const [form, onChange, clear] = useForm({ email: "", password: "" })
 
     const onSubmitForm = (event) => {
         console.log(form)
         event.preventDefault()
-        login(form, clear, history)
+        login(form, clear, history, setRightButtonText)
     }
 
 

@@ -7,13 +7,13 @@ import { goToSignup } from "../../routes/coordinator";
 import { LoginForm } from "./LoginForm";
 import useUnprotectedPage from '../../hooks/useUnprotectedPage'
 
-export const LoginPage = () => {
+export const LoginPage = ({setRightButtonText}) => {
     useUnprotectedPage()
     const history = useHistory()
 
     return (
         <LoginPageContainer>
-            <LoginForm />
+            <LoginForm setRightButtonText={setRightButtonText}/>
             <SignUpContainer>
                 <Button
                     type={"submit"}
