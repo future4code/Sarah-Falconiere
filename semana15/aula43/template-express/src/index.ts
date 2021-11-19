@@ -76,6 +76,27 @@ app.get("/countries/:id", (req, res) => {
 })
 
 
+//ENDPOINT DE EDITAR UM PAÍS
+app.put("/countries/:id", (req, res) => {
+    const id = req.params.id
+
+    let result: country | undefined = countries.find((country) => {
+        return country.id === Number(id)
+    })
+
+    if (result) {
+        req.body.name = "Brazilzil"
+        let editResult = {...result, name: req.body.name}
+        res
+        .status(200)
+        .send(editResult)
+    } else {
+        res
+        .status(404)
+        .send("País não encontrado!")
+    }
+})
+
 
 
 app.listen(3003, () => {
